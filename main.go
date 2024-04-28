@@ -1,6 +1,9 @@
 package main
 
-import "semicolonGo/chapter4"
+import (
+	"fmt"
+	"semicolonGo/chapter5"
+)
 
 func main() {
 
@@ -15,7 +18,10 @@ func main() {
 	//fmt.Println(chapter4.ConstantE(5))
 	//fmt.Println(chapter4.ConstantEx(5))
 	//chapter4.WorldPopulationGrowthDifference()
-	chapter4.Encrypt()
+	//chapter4.Encrypt()
 	//chapter4.Decrypt()
+	chapter5.PrintTriangles()
+	fmt.Println()
+	chapter5.PrintDiamond()
 
 }
