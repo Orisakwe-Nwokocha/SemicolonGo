@@ -23,5 +23,6 @@ func main() {
 	chapter5.PrintTriangles()
 	fmt.Println()
 	chapter5.PrintDiamond()
-
+	//chapter5.CalculateFairTax()
+	//chapter5.TakeGlobalWarmingQuiz()
 }
