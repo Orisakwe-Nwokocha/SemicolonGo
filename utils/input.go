@@ -9,20 +9,21 @@ import (
 
 type Input struct{}
 
-func (i Input) NextFloat() float64 {
+func (i Input) NextFloat() (float64, bool) {
 	var input float64
 	_, err := fmt.Scanf("%f", &input)
 	if err != nil {
-		fmt.Println("Error:", err)
+		//fmt.Println("Error:", err)
+		return 0, false
 	}
-	return input
+	return input, true
 }
 
 func (i Input) NextInt() (int, bool) {
 	var input int
 	_, err := fmt.Scanf("%d", &input)
 	if err != nil {
-		fmt.Println("Error:", err)
+		//fmt.Println("Error:", err)
 		return 0, false
 	}
 	return input, true

@@ -1,6 +1,6 @@
 package chapter5
 
-func GetQuizQuestions() [][]string {
+func getQuizQuestions() [][]string {
 	return [][]string{
 		{"Which statement aligns with the perspective of individuals who oppose the idea of human-induced global warming?",
 			"1. The burning of fossil fuels contributes significantly to the rise in greenhouse gas emissions.",

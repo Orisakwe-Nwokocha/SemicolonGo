@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"semicolonGo/chapter5"
+	"time"
 )
 
 func main() {
@@ -20,9 +20,28 @@ func main() {
 	//chapter4.WorldPopulationGrowthDifference()
 	//chapter4.Encrypt()
 	//chapter4.Decrypt()
-	chapter5.PrintTriangles()
-	fmt.Println()
-	chapter5.PrintDiamond()
+	//chapter5.PrintTriangles()
+	//fmt.Println(sort([]int{5, 1, 3, 2, 4}))
+	//chapter5.PrintDiamond()
 	//chapter5.CalculateFairTax()
 	//chapter5.TakeGlobalWarmingQuiz()
+	//checkoutapp.Checkout()
+
+	fmt.Println(time.Now().Format("02-Jan-06 3:04:05 pm"))
+}
+
+func sort(numbers []int) []int {
+	for index, number := range numbers {
+		numbers[index] = number * number
+
+	}
+	for counter := 0; counter < len(numbers); counter++ {
+		for index := 0; index < len(numbers)-1; index++ {
+			if numbers[index] > numbers[index+1] {
+				numbers[index], numbers[index+1] = numbers[index+1], numbers[index]
+			}
+		}
+
+	}
+	return numbers
 }

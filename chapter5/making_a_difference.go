@@ -10,7 +10,7 @@ func TakeGlobalWarmingQuiz() {
 	correctAnswers := 0
 
 	fmt.Println("Welcome to the Global Warming Quiz!")
-	questions := GetQuizQuestions()
+	questions := getQuizQuestions()
 
 	for row := 0; row < len(questions); row++ {
 		fmt.Printf("\nQuestion %d: %s\n", row+1, questions[row][0])
@@ -68,7 +68,7 @@ func getExpenses() map[string]float64 {
 
 	for _, category := range expenseCategories {
 		fmt.Printf("Enter expenses for %s:\n$", category)
-		expense := input.NextFloat()
+		expense, _ := input.NextFloat()
 		expenses[category] = expense
 	}
 
