@@ -88,3 +88,11 @@ func getDiscount() float64 {
 		return discount
 	}
 }
+
+func getSubTotal(purchasedQuantities []int, itemPrices []float64) float64 {
+	sum := 0.0
+	for index, itemPrice := range itemPrices {
+		sum += itemPrice * float64(purchasedQuantities[index])
+	}
+	return sum
+}

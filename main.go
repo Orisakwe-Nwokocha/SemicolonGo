@@ -1,9 +1,6 @@
 package main
 
-import (
-	"fmt"
-	"time"
-)
+import checkoutapp "semicolonGo/checkoutApp"
 
 func main() {
 
@@ -25,9 +22,9 @@ func main() {
 	//chapter5.PrintDiamond()
 	//chapter5.CalculateFairTax()
 	//chapter5.TakeGlobalWarmingQuiz()
-	//checkoutapp.Checkout()
+	checkoutapp.Checkout()
 
-	fmt.Println(time.Now().Format("02-Jan-06 3:04:05 pm"))
+	//fmt.Println(time.Now().Format("02-Jan-06 3:04:05 pm"))
 }
 
 func sort(numbers []int) []int {
