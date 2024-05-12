@@ -6,7 +6,7 @@ import (
 )
 
 func Checkout() {
-	displayInvoice()
+	displayReceipt()
 }
 
 func input(prompt string) string {

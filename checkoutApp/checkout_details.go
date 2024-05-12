@@ -96,3 +96,19 @@ func getSubTotal(purchasedQuantities []int, itemPrices []float64) float64 {
 	}
 	return sum
 }
+
+func getAmountPaid(billTotal float64) float64 {
+	scanner := utils.Input{}
+	for {
+		display("How much did the customer give to you?")
+		amountPaid, isSuccessful := scanner.NextFloat()
+
+		isInvalid := amountPaid < billTotal
+		if !isSuccessful || isInvalid {
+			display("Invalid input")
+			continue
+		}
+
+		return amountPaid
+	}
+}

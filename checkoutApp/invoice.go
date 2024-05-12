@@ -5,13 +5,13 @@ import (
 	"time"
 )
 
-func displayInvoice() {
+func displayInvoice() (string, []string, []int, []float64, string, float64, float64, float64, float64) {
 	customerName := input("What is the customer's name?")
 	items, purchasedQuantities, itemPrices := collectCheckoutDetails()
 	cashierName := input("What is your name?")
 	subTotal := getSubTotal(purchasedQuantities, itemPrices)
 	discount := (getDiscount() / 100) * subTotal
-	VAT := subTotal * (17.50 / 100)
+	VAT := subTotal * (7.50 / 100)
 	billTotal := (subTotal - discount) + VAT
 
 	headerFormat := `
@@ -39,13 +39,15 @@ Customer Name: %s`
 
 	format2 := `-------------------------------------------------------
 				Sub Total:        %10.2f
-				Discount:         %10.2f
-				VAT @ 7.50%%:      %10.2f
+				 Discount:        %10.2f
+			  VAT @ 7.50%%:        %10.2f
 =======================================================
-				Bill Total:       %10.2f
+			   Bill Total:        %10.2f
 =======================================================
    THIS IS NOT A RECEIPT, KINDLY PAY %.2f
 =======================================================
 `
 	fmt.Printf(format2, subTotal, discount, VAT, billTotal, billTotal)
+
+	return customerName, items, purchasedQuantities, itemPrices, cashierName, subTotal, discount, VAT, billTotal
 }
